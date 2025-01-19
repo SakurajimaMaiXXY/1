@@ -1,0 +1,23 @@
+设备ESP32-CAM的mqtt参数
+{"clientId":"k28ycH54tFN.ESP32-CAM|securemode=2,signmethod=hmacsha256,timestamp=1736843240291|","username":"ESP32-CAM&k28ycH54tFN","mqttHostUrl":"iot-06z00a5v13wqciu.mqtt.iothub.aliyuncs.com","passwd":"4271ba61e7030b4b181f67263e8fc0c2613872c938585a5c7ec7d489eac21a40","port":1883}
+
+
+ESP32-CAM发布消息的topic
+/sys/k28ycH54tFN/${deviceName}/thing/event/property/post
+修改后
+/sys/k28ycH54tFN/ESP32-CAM/thing/event/property/post
+
+
+ESP32-CAM订阅消息的topic
+/sys/k28ycH54tFN/${deviceName}/thing/service/property/set
+修改后
+/sys/k28ycH54tFN/ESP32-CAM/thing/service/property/set
+
+
+发送数据简化格式
+{
+    "params": {
+        "led": "1"
+    },
+    "version": "1.0"
+}
